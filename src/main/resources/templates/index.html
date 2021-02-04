@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Details</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2">
+<h1>Employee List</h1>
+<a th:href="@{/addEmployee}" class="btn btn-primary btn-sm mb-3"> Add Employee </a>
+<table border="1" class="table table-striped table-responsive-md" >
+	<thead>
+			<tr>
+				<th> Employee ID</th>
+				<th>Employee Name</th>
+				<th> Employee Surname</th>
+				<th> Employee Age</th>
+				<th> Company</th>
+				<th> PostCode</th>
+				</tr>
+		</thead>
+		<tbody>
+                <tr th:each="employee : ${EmployeeList}">
+                    <td th:text="${employee.EmpId}"></td>
+                    <td th:text="${employee.Forename}"></td>
+                    <td th:text="${employee.Surname}"></td>
+                    <td th:text=${employee.Age}></td>
+                    <td th:text=${employee.Company}></td>
+                    <td th:text=${employee.Postcode}></td>
+                    
+                </tr>
+            </tbody>
+</table>
+</div>
+
+</body>
+</html>
