@@ -20,7 +20,7 @@ public class Employee {
 	private String Surname;
 	
 	@Column(name="EmpAge")
-	private int Age;
+	private int age;
 	
 	@Column(name="Company")
 	private String Company;
@@ -36,7 +36,7 @@ public class Employee {
 		EmpId = empId;
 		Forename = forename;
 		Surname = surname;
-		Age = age;
+		age = age;
 		Company = company;
 		Postcode = postcode;
 	}
@@ -59,10 +59,10 @@ public class Employee {
 		Surname = surname;
 	}
 	public int getAge() {
-		return Age;
+		return age;
 	}
 	public void setAge(int age) {
-		Age = age;
+		this.age = age;
 	}
 	public String getCompany() {
 		return Company;
